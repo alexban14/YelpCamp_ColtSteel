@@ -1,9 +1,10 @@
 const bodyParser = require('body-parser');
 const express = require('express');
-const mongoose = require('mongoose');
 const app = express();
+const mongoose = require('mongoose');
 const path = require('path');
 const methodOverride = require('method-override');
+const ejsMate = require('ejs-mate');
 const Campground = require('./models/campground');
 
 mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp')
@@ -18,6 +19,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp')
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+// ejs template engine (for layouts, partials, blocks)
+app.engine('ejs', ejsMate);
 app.use(express.urlencoded({ extened: true }));
 app.use(methodOverride('_method'));
 
