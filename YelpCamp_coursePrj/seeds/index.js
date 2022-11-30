@@ -19,19 +19,19 @@ db.once("open", () => {
 
 const sample = array => array[Math.floor(Math.random() * array.length)];
 
-async function seedImg() {
-	try {
-	  const resp = await axios.get('https://api.unsplash.com/photos/random', {
-		params: {
-		  client_id: 'bpGP9X197BhHUyKwCQsGlVGcE7o5IVQSYbSbuu6jvVg',
-		  collections: 1114848,
-		},
-	  })
-	  console.log(resp.data.urls['small']);
-	} catch (err) {
-	  console.error(err)
-	}
-};
+// async function seedImg() {
+// 	try {
+// 	  const resp = await axios.get('https://api.unsplash.com/photos/random', {
+// 		params: {
+// 		  client_id: 'bpGP9X197BhHUyKwCQsGlVGcE7o5IVQSYbSbuu6jvVg',
+// 		  collections: 1114848,
+// 		},
+// 	  })
+// 	  console.log(resp.data.urls['small']);
+// 	} catch (err) {
+// 	  console.error(err)
+// 	}
+// };
 
 const seedDB = async () => {
     await Campground.deleteMany({});
