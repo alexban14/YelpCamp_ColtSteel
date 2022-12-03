@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Farm</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bgStyle.css">
+    <!-- we also need jQuery for the bootsrapt js script to work -->
+    <script src="/js/jquery-3.6.1.min.js"></script>
+    <script src="/js/bootstrap.min.js" defer></script>
+</head>
+
+<body>
+    <div class="container my-3 p-0">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Add a new Farm</h2>
+                <form action="/farms" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Farm name</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Farm name">
+                    </div>
+					<div class="mb-3">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" name="city" id="city" class="form-control" placeholder="City">
+                    </div>
+					<div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                    </div>
+                    <button class="btn btn-outline-success m-2">Add product</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
